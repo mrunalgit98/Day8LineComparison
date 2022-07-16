@@ -6,7 +6,8 @@ public class lineComparison {
 
 	static double length(int x1,int y1 ,int x2,int y2)
 	{
-		double value =Math.pow(x2, x1)+Math.pow(y2, y1);
+		double value =((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1));
+		double length=Math.sqrt(value);
 		return value;
 	}
 	public static void main(String[] args) {
@@ -29,6 +30,6 @@ public class lineComparison {
         
        double value=length(a1,a2,b1,b2);
        
-       System.out.println("length of line is "+Math.sqrt(value)  );
+       System.out.println("length of line is "+value  );
 	}
 }
