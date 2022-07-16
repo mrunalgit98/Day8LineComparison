@@ -17,9 +17,12 @@ public class lineComparison {
 	        {
 	            System.out.println("Both the lines are equal");
 	        }
-	        else
+	        else if(l1>l2)
 	        {
-	            System.out.println("Both the lines are not equal");
+	            System.out.println("line1 is greater than second");
+	        }
+	        else {
+	        	System.out.println("line2 is greater than line1");
 	        }
 	 }
         public static void main(String[] args) {
