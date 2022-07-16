@@ -4,27 +4,6 @@ import java.util.Scanner;
 
 public class lineComparison {
 
-	static double length(int x1,int y1 ,int x2,int y2)
-	{
-		double value =((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1));
-		double length=Math.sqrt(value);
-		return value;
-	}
-	
-	 public static void lineEquality(double l1,double l2){
-	        
-	        if(l1==l2)
-	        {
-	            System.out.println("Both the lines are equal");
-	        }
-	        else if(l1>l2)
-	        {
-	            System.out.println("line1 is greater than second");
-	        }
-	        else {
-	        	System.out.println("line2 is greater than line1");
-	        }
-	 }
         public static void main(String[] args) {
 		System.out.println("ENTER FIRST COORDINATE X1");
 		Scanner x1=new Scanner(System.in);
@@ -43,7 +22,8 @@ public class lineComparison {
 		Scanner y2=new Scanner(System.in);
         int b2=y2.nextInt();
         
-       double l1=length(a1,a2,b1,b2);
+       length c1=new length ();
+       double l1=c1.length(a1,a2,b1,b2);
        System.out.println("length of line1 is "+l1 );
        
        
@@ -64,10 +44,17 @@ public class lineComparison {
 		Scanner y4=new Scanner(System.in);
 		int b4=y4.nextInt();
 		
-		double l2=length(a3,a4,b3,b4);
+		length c2=new length();
+		double l2=c2.length(a3,a4,b3,b4);
 	     System.out.println("length of line1 is "+l2  );
 	     
-	     lineComparison.lineEquality(l1, l2);
+	     
+	     
+	     compare obj=new compare();
+	        obj.lineEquality1(l1,l2);
+	        obj.lineEquality(l1,l2);
        
 	}
+
+		
 }
